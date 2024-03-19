@@ -1,0 +1,655 @@
+  body {
+    margin: 0px;
+    /* Устанавливает отступы по умолчанию для элемента body */
+    background-color: rgba(249, 209, 149, 1);
+    /* Устанавливает цвет фона с использованием RGBA */
+    position: relative;
+    /* Устанавливает позиционирование элемента относительно его первоначального положения */
+    width: 1200px;
+    /* Устанавливает ширину элемента в 1200 пикселей */
+    margin-left: auto;
+    /* Автоматически задает отступ слева элемента */
+    margin-right: auto;
+    /* Автоматически задает отступ справа элемента */
+    text-align: left;
+    /* Устанавливает выравнивание текста внутри элемента по левому краю */
+  }
+
+  .form_sketch {
+    border-color: transparent;
+    /* Устанавливает прозрачный цвет границы для элементов с классом .form_sketch */
+    background-color: transparent;
+    /* Устанавливает прозрачный цвет фона для элементов с классом .form_sketch */
+  }
+
+  #base {
+    position: absolute;
+    /* Устанавливает позиционирование элемента с id "base" абсолютно */
+    z-index: 0;
+    /* Устанавливает значение z-index (порядок слоя) элемента с id "base" */
+  }
+
+  /*Логотип*/
+  #u62_img {
+    border-width: 0px;
+    position: absolute;
+    width: 348px;
+    height: 206px;
+  }
+
+  #u62 {
+    position: absolute;
+    left: 426px;
+    width: 348px;
+    height: 206px;
+    display: flex;
+  }
+
+  /*Шапка*/
+  #u63_div {
+    position: absolute;
+    /* Позиционируем элемент абсолютно */
+    width: 862px;
+    /* Ширина элемента */
+    height: 68px;
+    /* Высота элемента */
+    background: inherit;
+    /* Наследуем фон */
+    background-color: rgba(249, 209, 149, 1);
+    /* Цвет фона с полной непрозрачностью */
+    box-sizing: border-box;
+    /* Учитываем границы и отступы внутри размеров элемента */
+    border-width: 1px;
+    /* Толщина границы */
+    border-style: solid;
+    /* Стиль границы */
+    border-color: rgba(249, 209, 149, 1);
+    /* Цвет границы */
+    box-shadow: none;
+    /* Тень блока (отключена) */
+    color: #F8D094;
+    /* Цвет текста */
+  }
+
+  #u63 {
+    border-width: 0px;
+    position: absolute;
+    left: 169px;
+    top: 185px;
+    width: 862px;
+    height: 68px;
+    display: flex;
+    opacity: 0.84;
+    color: #F8D094;
+  }
+
+  #u66_div,
+  #u68_div,
+  #u69_div,
+  #u70_div {
+    border-width: 0px;
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(249, 209, 149, 1);
+    border-radius: 5px;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #68391A;
+    border: 2px solid black;
+    /* Обычная граница */
+    transition: border-color 0.3s ease;
+    /* Плавное изменение цвета границы */
+    border-color: rgba(153, 227, 236, 1);
+    /* Цвет границы при наведении */
+  }
+
+  /*КНОПКА О НАС*/
+  #u66 {
+    border-width: 0px;
+    position: absolute;
+    left: 408px;
+    top: 209px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #6F4427;
+  }
+
+  #u66 .text,
+  #u68 .text,
+  #u69 .text,
+  #u70 .text,
+  #u74 .text,
+  #u75 .text,
+  #u76 .text,
+  #u77 .text {
+    position: absolute;
+    align-self: center;
+    padding: 2px 2px 2px 2px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    color: #673A1C;
+    /* Задаем цвет текста */
+  }
+
+  #u66_text,
+  #u68_text,
+  #u69_text,
+  #u70_text,
+  #u74_text {
+    border-width: 0px;
+    word-wrap: break-word;
+    text-transform: none;
+  }
+
+  #u67 {
+    border-width: 0px;
+    position: absolute;
+    left: 616px;
+    top: 743px;
+    width: 197px;
+    height: 203px;
+    display: flex;
+  }
+
+  /*КНОПКА КОНТАКТЫ*/
+  #u68 {
+    position: absolute;
+    left: 824px;
+    top: 209px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #68391A;
+  }
+
+  /*ЛАБОРАТОРНАЯ РАБОТА Стили для подменю "Контакты"*/
+  /* Стили для подменю */
+  .subContakt {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+
+  .subContakt ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .subContakt ul li {
+    padding: 10px;
+  }
+
+  .subContakt ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .subContakt ul li a:hover {
+    background-color: #f4f4f4;
+  }
+
+  /* Показываем подменю при наведении на элемент */
+  #u68:hover .subContakt {
+    display: block;
+  }
+
+  /*КНОПКА МЕНЮ*/
+  #u69 {
+    position: absolute;
+    /* Позиционируем элемент абсолютно */
+    left: 616px;
+    /* Отступ слева от левого края родительского контейнера на расстоянии 616 пикселей */
+    top: 209px;
+    /* Отступ сверху от верхнего края родительского контейнера на расстоянии 209 пикселей */
+    width: 170px;
+    /* Ширина элемента */
+    height: 40px;
+    /* Высота элемента */
+    display: flex;
+    /* Устанавливаем элемент как flex-контейнер */
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    /* Шрифт */
+    font-weight: 700;
+    /* Полужирное начертание */
+    font-style: normal;
+    /* Обычный стиль */
+    color: #68391A;
+    /* Цвет текста */
+  }
+
+  /*ЛАБОРАТОРНАЯ РАБОТА Стили для подменю "МЕНЮ"*/
+  .submenu {
+    display: none;
+    /* Изначально скрываем подменю */
+    position: absolute;
+    /* Позиционируем абсолютно относительно ближайшего позиционированного родителя */
+    left: 0;
+    /* Располагаем подменю в левом краю */
+    bottom: 100%;
+    /* Размещаем подменю сверху относительно родительского элемента */
+    background-color: #fff;
+    /* Цвет фона подменю */
+    border: 1px solid rgba(153, 227, 236, 1);
+    ;
+    /* Граница подменю */
+  }
+
+  .submenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .submenu ul li {
+    padding: 10px;
+  }
+
+  .submenu ul li a {
+    text-decoration: none;
+    color: #68391A;
+  }
+
+  .submenu ul li a:hover {
+    background-color: #f4f4f4;
+  }
+
+  #u69:hover .submenu {
+    display: block;
+  }
+
+  /*ГЛАВНАЯ*/
+  #u70 {
+    position: absolute;
+    left: 200px;
+    top: 209px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #673A1C;
+  }
+
+  /*АНИМАЦИЯ ДЛЯ ТЕГА А*/
+  .hyperlink {
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    color: #673A1C;
+    /* Задаем цвет текста */
+    padding: 5px 20px;
+    /* Добавляем отступы вокруг текста */
+    border-bottom: none;
+    /* Убираем линию снизу */
+    transition: color 0.3s ease;
+    /* Анимация изменения цвета за 0.3 секунды с эффектом плавности */
+  }
+
+  a:hover {
+    color: rgba(153, 227, 236, 1);
+    /* Цвет текста ссылки при наведении */
+  }
+  /* АНИМАЦИЯ БОЛЬШОЙ КАРТИНКИ ЛАБОРАТОРНАЯ 9*/
+  @keyframes scale-animation {
+    from {
+      transform: scale(1);
+      /* Начальный масштаб */
+    }
+
+    to {
+      transform: scale(1.12);
+      /* Конечный масштаб */
+    }
+  }
+
+  #u85 {
+    position: absolute;
+    /* Абсолютное позиционирование: */
+    left: 206px;
+    /* Расстояние от левого края контейнера до левого края элемента будет 206 пикселей */
+    top: 280px;
+    /* Расстояние от верхнего края контейнера до верхнего края элемента будет 296 пикселей */
+    width: 784px;
+    /* Ширина элемента будет 784 пикселя */
+    height: 414px;
+    /* Высота элемента будет 414 пикселей */
+    display: flex;
+  }
+  /*КАРТИНКИ КЕКСОВ*/
+  #u64_img,
+  #u65_img,
+  #u67_img,
+  #u71_img {
+    border-width: 0px;
+    position: absolute;
+    width: 197px;
+    height: 203px;
+    transition: border-radius 0.5s ease;
+    /* Анимация изменения border-radius */
+  }
+
+  /*Анимация */
+  #u64_img:hover {
+    border-radius: 50%;
+    /* Изменение радиуса границы при наведении */
+  }
+
+  #u65_img:hover {
+    border-radius: 50%;
+    /* Изменение радиуса границы при наведении */
+  }
+
+  #u67_img:hover {
+    border-radius: 50%;
+    /* Изменение радиуса границы при наведении */
+  }
+
+  #u71_img:hover {
+    border-radius: 50%;
+    /* Изменение радиуса границы при наведении */
+  }
+
+  #u64 {
+    position: absolute;
+    left: 395px;
+    top: 743px;
+    width: 197px;
+    height: 203px;
+    display: flex;
+  }
+
+  #u65 {
+    position: absolute;
+    /* Позиционируем элемент абсолютно */
+    left: 169px;
+    /* Располагаем элемент относительно левого края родительского контейнера на расстоянии 169 пикселей */
+    top: 743px;
+    /* Располагаем элемент относительно верхнего края родительского контейнера на расстоянии 743 пикселя */
+    width: 197px;
+    /* Устанавливаем ширину элемента в 197 пикселей */
+    height: 203px;
+    /* Устанавливаем высоту элемента в 203 пикселя */
+    display: flex;
+    /* Устанавливаем элемент как flex-контейнер */
+  }
+
+  #u71 {
+    position: absolute;
+    left: 834px;
+    top: 743px;
+    width: 197px;
+    height: 203px;
+    display: flex;
+  }
+
+  /*ТЕКСТ*/
+  #u72_img,
+  #u73_img {
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 862px;
+    height: 33px;
+  }
+
+  #u72 {
+    position: absolute;
+    left: 167px;
+    top: 965px;
+    width: 862px;
+    height: 33px;
+    display: flex;
+  }
+
+  /*МИНИ картинки*/
+  #u75_img,
+  #u76_img,
+  #u77_img {
+    position: absolute;
+    /* Позиционирование абсолютное - элементы будут*/
+    width: 66px;
+    /* Ширина изображений */
+    height: 58px;
+    /* Высота изображений */
+    transition: transform 0.5s ease;
+    /* Анимация изменения transform */
+  }
+
+  /*Трансформация*/
+  #u75_img:hover {
+    transform: rotate(360deg);
+    /* Изменение поворота при наведении */
+  }
+
+  #u76_img:hover {
+    transform: rotate(360deg);
+    /* Изменение поворота при наведении */
+  }
+
+  #u77_img:hover {
+    transform: rotate(360deg);
+    /* Изменение поворота при наведении */
+  }
+
+  /*СТИЛЬ МИНИ КАРТИНКА 1 */
+  #u75 {
+    position: absolute;
+    /* Позиционируем элемент абсолютно */
+    left: 312px;
+    /* Располагаем элемент относительно левого края родительского контейнера на расстоянии 312 пикселей */
+    top: 1017px;
+    /* Располагаем элемент относительно верхнего края родительского контейнера на расстоянии 1017 пикселей */
+    width: 63px;
+    /* Устанавливаем ширину 63 пикселя */
+    height: 58px;
+    /* Устанавливаем высоту 58 пикселей */
+    display: flex;
+    /* Устанавливаем flex-контейнером */
+    ;
+  }
+
+  /*СТИЛЬ МИНИ КАРТИНКА 2 */
+  #u76 {
+    position: absolute;
+    left: 569px;
+    top: 1017px;
+    width: 63px;
+    height: 58px;
+    display: flex;
+  }
+
+  /* СТИЛЬ МИНИ КАРТИНКА 3 */
+  #u77 {
+    position: absolute;
+    left: 823px;
+    top: 1017px;
+    width: 59px;
+    height: 58px;
+    display: flex;
+  }
+
+  /*СТИЛЬ ВКУСНЫЕ -НОВОСТИ */
+  #u78_div {
+    position: absolute;
+    /* Позиционирование элемента абсолютно */
+    width: 107px;
+    /* Ширина элемента */
+    height: 52px;
+    /* Высота элемента */
+    background: inherit;
+    /* Наследование фона */
+    background-color: rgba(255, 255, 255, 0);
+    /* Цвет фона с прозрачностью */
+    border: none;
+    /* Убираем границу */
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    /* Шрифт */
+    font-weight: 700;
+    /* Полужирное начертание */
+    font-style: normal;
+    /* Обычный стиль */
+    font-size: 16px;
+    /* Размер шрифта */
+    color: #5D3317;
+    /* Цвет текста */
+  }
+
+  #u78 {
+    border-width: 0px;
+    /* Толщина границы элемента (нет границы) */
+    position: absolute;
+    /* Позиционирование элемента абсолютно */
+    left: 301px;
+    /* Отступ слева от левого края родительского контейнера */
+    top: 1080px;
+    /* Отступ сверху от верхнего края родительского контейнера */
+    width: 107px;
+    /* Ширина элемента */
+    height: 52px;
+    /* Высота элемента */
+    display: flex;
+    /* Использование flex-контейнера */
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    /* Шрифт */
+    font-weight: 700;
+    /* Полужирное начертание */
+    font-style: normal;
+    /* Обычный стиль */
+    font-size: 16px;
+    /* Размер шрифта */
+    color: #68391A;
+    /* Цвет текста */
+  }
+
+  /* СТИЛЬ ЖДЁМ В ГОСТИ */
+  #u79_div {
+    border-width: 0px;
+    position: absolute;
+    width: 70px;
+    height: 52px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #68391A;
+  }
+
+  #u79 {
+    position: absolute;
+    left: 815px;
+    top: 1080px;
+    width: 70px;
+    height: 52px;
+    display: flex;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #68391A;
+  }
+
+  /*СТИЛЬ ОНЛАЙН- ЗАКАЗ */
+  #u80_div {
+    position: absolute;
+    width: 82px;
+    height: 52px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #68391A;
+  }
+
+  #u80 {
+    position: absolute;
+    left: 569px;
+    top: 1080px;
+    width: 82px;
+    height: 52px;
+    display: flex;
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #68391A;
+  }
+
+  /*СТИЛЬ БОЛЬШОЙ КАРТИНКИ*/
+  #u85_img {
+    position: absolute;
+    /* Абсолютное позиционирование:  */
+    width: 784px;
+    /* Ширина элемента будет 784 пикселя */
+    height: 414px;
+    /* Высота элемента будет 414 пикселей */
+    animation: scale-animation 4s infinite alternate;
+    /* Анимация масштабирования */
+  }
+
+  /*ПОДВАЛ сайта*/
+  #u73 {
+    position: absolute;
+    left: 167px;
+    top: 1160px;
+    width: 862px;
+    height: 33px;
+    display: flex;
+  }
+
+  #u74_div {
+    position: absolute;
+    /* Абсолютное позиционирование: */
+    width: 271px;
+    /* Ширина элемента будет 271 пиксель */
+    height: 20px;
+    /* Высота элемента будет 20 пикселей */
+    background-color: rgba(255, 255, 255, 0);
+    /* Цвет фона: прозрачный */
+    font-family: "Arial Обычный", "Arial", sans-serif;
+    font-weight: 400;
+    /* Начертание шрифта: обычное */
+    font-style: normal;
+    /* Стиль шрифта: обычный (не курсив) */
+    font-size: 13px;
+    /* Размер шрифта будет 13 пикселей */
+  }
+
+  #u74 {
+    position: absolute;
+    left: 463px;
+    top: 1220px;
+    width: 271px;
+    height: 20px;
+    display: flex;
+    font-family: "Arial Обычный", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+  }

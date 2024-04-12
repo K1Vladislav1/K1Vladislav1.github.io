@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(249, 209, 149, 1);
+    text-align: center;
+  }
+  h2{
+    color: #68391A;
+  }
+div{
+    color: rgba(249, 209, 149, 1);
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color:#68391A;; /* Задаем цвет текста */
+    padding: 5px 20px; /* Добавляем отступы вокруг текста */
+    border-bottom: none; /* Убираем линию снизу */
+    font-size: 20px;
+}
+.map {
+    position: relative;
+}
+.map img {
+    width: 50%;
+    height: auto;
+}
+.map svg {
+    position: absolute;
+    top: 0;
+    left: 380px;
+    width: 50%;
+    height: 100%;
+}
+.map svg path {
+    fill: none; /* Убираем обводку */
+    pointer-events: all; /* Разрешаем быть целью событий мыши */
+    cursor: pointer; /* Меняем курсор при наведении */
+}
+.map svg path:hover {
+    animation: hoverElement 2s linear infinite; /* При наведении включаем анимацию */
+}
+
+@keyframes hoverElement { /* Сама анимация */
+    0% {
+        stroke: #000000;
+    }
+    50% {
+        stroke: #fc0000;
+    }
+    100% {
+        stroke: #000000; 
+    }
+}
+.map {
+    position: relative;
+}
+.map svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.map svg path {
+    fill: none; 
+    pointer-events: all; 
+    cursor: pointer; 
+}
+/* Применение анимации при наведении на элементы SVG в блоке с классом .map */
+.map svg path:hover {
+    animation: hoverElement 2s linear infinite; /* Анимация при наведении на элемент */
+}
+
+/* Стили для всплывающей подсказки */
+.tooltip {
+    border-radius: 5px; /* Закругление углов */
+    padding: 5px; /* Отступы внутри элемента */
+    font-weight: 500; /* Полужирный текст */
+    background: #fff; /* Фон */
+    color: #000; /* Цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    position: absolute; /* Позиционирование абсолютно */
+}
+
+/* Анимация для изменения цвета обводки элемента */
+@keyframes hoverElement {
+    0% {
+        stroke: #000000; /* Начальный цвет обводки */
+    }
+    50% {
+        stroke: #fc0000; /* Промежуточный цвет обводки */
+    }
+    100% {
+        stroke: #000000; /* Конечный цвет обводки */
+    }
+}
+
+/* Стили для фонового затемнения при отображении информации */
+.info__bg {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Расположение сверху */
+    left: 0; /* Расположение слева */
+    width: 100%; /* Ширина 100% */
+    height: 100vh; /* Высота 100% от высоты окна просмотра */
+    background: rgba(0,0,0,0.5); /* Цвет фона с прозрачностью */
+    opacity: 0; /* Начальная прозрачность */
+    transition: 0.3s all; /* Плавное изменение свойств */
+    pointer-events: none; /* Отключение событий мыши */
+    z-index: 10; /* z-index для контроля порядка слоев */
+}
+
+/* Активные стили для фонового затемнения */
+.info__bg.active {
+    pointer-events: all; /* Включение событий мыши */
+    opacity: 1; /* Увеличение прозрачности */
+}
+
+/* Стили для блока информации */
+.info {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Положение сверху по центру */
+    left: 50%; /* Положение слева по центру */
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты блока */
+    background: #fff; /* Цвет фона */
+    border-radius: 20px; /* Закругление углов */
+    padding: 25px; /* Внутренние отступы */
+    width: 500px; /* Ширина блока */
+}

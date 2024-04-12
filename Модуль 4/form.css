@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(249, 209, 149, 1);
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  input{
+    background-color:white;
+    /* Задает цвет фона (белый) с использованием прозрачности (1) */
+    box-sizing: border-box;
+    /* Устанавливает модель контента box-sizing: border-box, что позволяет учитывать границу и padding в расчетах размера элемента */
+    border-width: 0px;
+    /* Задает ширину границы */
+    border-style: solid;
+    /* Задает стиль границы (сплошная линия) */
+    border-color: rgb(54, 215, 210);
+    /* Задает цвет границы (серый) с использованием прозрачности (1) */
+    border-radius: 0px;
+    /* Задает радиус скругления углов границы (в данном случае углы не скругляются) */
+    color: #b46d49;
+    /* Задает цвет текста */
+  }
+  label,
+  input,
+  select,
+  textarea {
+    display: block;
+    color: #673A1C;
+    margin-bottom: 6px;
+    width: 300px;
+    height: 25px;
+  }
+  
+  input[type="submit"] {
+    background-color:rgba(153, 227, 236, 1);;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+  }
+  
+  input[type="submit"]:hover {
+    color: #673A1C;
+  }
+  
+  #errorMsg {
+    color: red;
+  }
+  

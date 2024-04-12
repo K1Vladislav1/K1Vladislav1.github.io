@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>задачи</title>
+<script>
+function solve() {
+    // Запрашиваем у пользователя значения x, y и z
+    var x = parseFloat(prompt('Введите значение x'));
+    var y = parseFloat(prompt('Введите значение y'));
+    var z = parseFloat(prompt('Введите значение z'));
+
+    // Проверяем, были ли введены действительные числа
+    if (isNaN(x) || isNaN(y) || isNaN(z)) {
+        alert('Пожалуйста, введите действительные числа.');
+        return; // В случае ошибки ввода завершаем выполнение функции
+    }
+
+    // Проверяем условие задачи: сумма меньше единицы
+    if (x + y + z < 1) {
+        // Находим наименьшее из трех чисел
+        var min = Math.min(x, y, z);
+        // Заменяем наименьшее число полусуммой двух других
+        if (min === x) {
+            x = (y + z) / 2;
+        } else if (min === y) {
+            y = (x + z) / 2;
+        } else {
+            z = (x + y) / 2;
+        }
+    } else { // Если сумма не меньше единицы
+        // Находим наименьшее из двух чисел x и y
+        var minXY = Math.min(x, y);
+        // Заменяем наименьшее из x и y полусуммой двух оставшихся значений
+        if (minXY === x) {
+            x = (y + z) / 2;
+        } else {
+            y = (x + z) / 2;
+        }
+    }
+
+    // Выводим новые значения x, y и z
+    alert('x = ' + x + ', y = ' + y + ', z = ' + z);
+}
+</script>
+<style>
+    body{
+    position: absolute;
+    align-self: center;
+    padding: 2px 2px 2px 2px;
+    box-sizing: border-box;
+    background-color: rgba(249, 209, 149, 1);;
+    width: 100%;
+    text-align: center;
+    }
+    h1{
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #68391A;
+    }
+    p{
+    font-family: "Arial Полужирный", "Arial Обычный", "Arial", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #68391A;
+    line-height: normal;
+    letter-spacing: 0;
+    }
+    input{
+        background: inherit;
+    /* Наследует фоновый цвет от родительского элемента */
+    background-color: rgb(212, 183, 183);
+    /* Задает цвет фона (белый) с использованием прозрачности (1) */
+    box-sizing: border-box;
+    /* Устанавливает модель контента box-sizing: border-box, что позволяет учитывать границу и padding в расчетах размера элемента */
+    border-width: 0px;
+    /* Задает ширину границы */
+    border-style: solid;
+    /* Задает стиль границы (сплошная линия) */
+    border-color: rgb(54, 215, 210);
+    /* Задает цвет границы (серый) с использованием прозрачности (1) */
+    border-radius: 0px;
+    /* Задает радиус скругления углов границы (в данном случае углы не скругляются) */
+    color: #a96a4b;
+    /* Задает цвет текста */
+    }
+    button{
+        background-color:rgb(54, 215, 210);
+        border-color: rgb(54, 215, 209);
+        border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+    <h1>Задания 1</h1>
+    <p> Если сумма трех попарно различных действительных чисел x, y, z меньше</p>
+        <p>единицы, то наименьшее из этих трех чисел заменить полусуммой двух 
+        других;</p><p> в противном случае заменить меньшее из x и y полусуммой двух
+        оставшихся значений.</p>
+    <p>НАЖМИ чтобы начать решать первое задания  </p>
+    <button onclick="solve()">Начать </button>
+    <h1>Задания 2</h1>
+    <img src="img/a n .jpg" alt="УРОВНЕНИЯ">
+        <p>Введите действительное число <em>a</em> (только положительные числа):</p>
+        <input type="text" id="inputA">
+        <p>Введите натуральное число <em>n</em> (только положительные числа):</p>
+        <input type="text" id="inputN">
+        <button id="calculateButton">Вычислить</button>
+        <button id="clearButton" onclick="clearInputs()">Очистить</button>
+        <p id="result"></p>
+    <script src="code.js"></script>
+</body>
+</html>

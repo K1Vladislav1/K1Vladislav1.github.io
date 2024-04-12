@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доля рынка кондитерских изделий</title>
+    <!-- Подключаем Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(249, 209, 149, 1);
+  }
+        canvas {
+            position: relative; /* Относительное позиционирование */
+            width: 530px; /* Ширина контейнера */
+            height: 530px; /* Высота контейнера */
+            margin: 0 auto; /* Автоматическое выравнивание по горизонтали */
+            top: 60%; /* Положение по вертикали */
+            transform: translateY(1%); /* Коррекция положения по вертикали */
+        }
+        h2{
+            color: #673A1C;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Доля кондитерских изделий на рынке Казахстана за 2019(в - %) </h2>
+    <!-- Канва для отображения диаграммы -->
+    <canvas id="myChart"></canvas>
+
+    <script>
+        // Данные о доле рынка кондитерских изделий
+        const data = {
+            labels: ['Иностранные фабрики', 'Рахат', 'Баян Сулу', 'Якар', 'Прочее'],
+            datasets: [{
+                data: [35, 23, 17, 15, 10], // Процентная доля рынка
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)'
+                ],
+                hoverOffset: 4 // Смещение при наведении на сектор
+            }]
+        };
+
+        // Настройки диаграммы
+        const options = {
+            responsive: true, // Адаптивность диаграммы
+            animation: {
+                animateRotate: true, // Анимация поворота диаграммы
+                animateScale: true // Анимация масштабирования диаграммы
+            },
+            tooltips: {
+                callbacks: {
+                    // Функция label определяет, что будет отображаться в каждой подсказке 
+                    label: function(tooltipItem, data) { 
+                        // Получаем метку (label) сектора из данных диаграммы по индексу tooltipItem
+                        const label = data.labels[tooltipItem.index];
+                        // Получаем значение (value) сектора из данных диаграммы по индексу tooltipItem
+                        const value = data.datasets[0].data[tooltipItem.index];
+                        // Возвращаем строку, объединяя метку и значение, для отображения в подсказке
+                        return label + ': ' + value + '%';
+                    }
+                }
+            }
+        };
+
+        // Инициализация диаграммы
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie', // Тип диаграммы - круговая
+            data: data,
+            options: options
+        });
+    </script>
+</body>
+</html>
